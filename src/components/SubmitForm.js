@@ -29,7 +29,8 @@ class SubmitForm extends Component {
         try {
             //let idForWeather = process.env.REACT_APP_WEATHER_ID;
             //let url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityName}&units=${this.state.unit}&appid=${idForWeather}`;
-            let url = `http://localhost:9890/weatherdata?q=${this.state.cityName}&units=${this.state.unit}`;
+            // let url = `http://localhost:9890/weatherdata?q=${this.state.cityName}&units=${this.state.unit}`;
+            let url = `https://wthrappz.herokuapp.com/weatherdata?q=${this.state.cityName}&units=${this.state.unit}`;
 
             let response = await fetch(url);
             let respondData = await response.json();
@@ -73,8 +74,8 @@ class SubmitForm extends Component {
         try {
             //let idForGiphy = process.env.REACT_APP_GIPHY_ID;
             // let url = `https://api.giphy.com/v1/gifs/translate?api_key=${idForGiphy}&s=${main}&weirdness=${10}`;
-            let url = `http://localhost:9890/gifdata?s=${main}`
-
+            //let url = `http://localhost:9890/gifdata?s=${main}`;
+            let url = `https://wthrappz.herokuapp.com/gifdata?s=${main}`
 
             let response = await fetch(url);
             let responseData = await response.json();
@@ -89,7 +90,8 @@ class SubmitForm extends Component {
         try {
             //let idForGiphy = process.env.REACT_APP_GIPHY_ID;
             // let url = `https://api.giphy.com/v1/gifs/translate?api_key=${idForGiphy}&s=error&weirdness=${10}`;
-            let url = `http://localhost:9890/errorgifdata`
+            // let url = `http://localhost:9890/errorgifdata`;
+            let url = `https://wthrappz.herokuapp.com/errorgifdata`;
 
             let response = await fetch(url);
             let responseData = await response.json();
